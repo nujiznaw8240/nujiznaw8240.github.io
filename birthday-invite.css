@@ -135,12 +135,12 @@ body {
     z-index: 2;
 }
 .tube1 {
-    top: 50px;
+    top: 20px;
     left: 0px;
     z-index: 1;
 }
 .tube2 {
-    top: 50px;
+    top: 20px;
     right: 0px;
     transform: rotate(60deg);
     z-index: 1;
