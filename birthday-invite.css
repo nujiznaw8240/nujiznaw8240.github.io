@@ -94,7 +94,6 @@ body {
 }
 .fw-tube {
     position: absolute;
-    mix-blend-mode: multiply;
     width: 120px;
     cursor: pointer;
 }
