@@ -1,6 +1,10 @@
 body {
     background-color: rgba(222, 184, 135, 0.808);
 }
+:root {
+    --firework-url: url('https://www.freeiconspng.com/thumbs/fireworks-png/fireworks-png-image-19.png');
+    --firework-tube-url: url('https://img.freepik.com/premium-vector/confetti-trumpet-icon-logo-design-template-vector-isolated-illustration_19104-888.jpg');
+}
 #title {
     text-align: center;
     font-family: "Lucida Handwriting", serif;
@@ -53,6 +57,8 @@ body {
         opacity: 1; /* Fade back in */
     }
 }
+
+/* fireworks */
 .firework-box1 {
     grid-column: 3/4;
     width: 100%;
@@ -71,61 +77,73 @@ body {
     display: flex;
 }
 .firework {
-    width: 80px;
+    width: 160px;
+    height: 184px;
+    background: var(--firework-url) no-repeat center/contain;
     opacity: 0;
-    transform: scale(0.3);
     transition: transform 1s ease, opacity 1s ease;
-}
-#tube1:hover ~ .firework {
-    transform: scale(1); 
-    opacity: 1; 
-}
-#tube2:hover ~.firework {
-    transform: scale(1); 
-    opacity: 1;
-}
-#fw1 {
     position: absolute;
-    left: 20px;
-}
-#fw2 {
-    position: absolute;
-    top: 50px;
-    left: 0px;
-}
-#fw3 {
-    position: absolute;
-    top: 50px;
-    left: 50px;
-}
-#fw4 {
-    position: absolute;
-    right: 20px;
-}
-#fw5 {
-    position: absolute;
-    top: 50px;
-    right: 0px;
-}
-#fw6 {
-    position: absolute;
-    top: 50px;
-    right: 50px;
 }
 .fw-tube {
     position: absolute;
-    /* mix-blend-mode: multiply; */
-    width: 120px;
+    mix-blend-mode: multiply;
+    width: 240px;
+    height: 180px;
+    background: var(--firework-tube-url) no-repeat center/contain;
     cursor: pointer;
 }
-#tube1 {
-    top: 100px;
-    left: 70px;
-    transform: rotate(-60deg);
+.tube1:hover ~ .firework {
+    transform: translate(-50%, -50%) scale(1); 
+    opacity: 1; 
 }
-#tube2 {
-    top: 100px;
-    right: 70px;
+.tube2:hover ~.firework {
+    transform: translate(50%, -50%) scale(1); 
+    opacity: 1;
+}
+.fw1 {
+    left: 20px;
+    transform: translate(-50%, -50%) scale(0.3);
+    z-index: 2;
+}
+.fw2 {
+    top: 50px;
+    left: 0px;
+    transform: translate(-50%, -50%) scale(0.3);
+    z-index: 2;
+}
+.fw3 {
+    top: 50px;
+    left: 50px;
+    transform: translate(-50%, -50%) scale(0.3);
+    z-index: 2;
+}
+.fw4 {
+    right: 20px;
+    transform: translate(50%, -50%) scale(0.3);
+    z-index: 2;
+}
+.fw5 {
+    top: 50px;
+    right: 0px;
+    transform: translate(50%, -50%) scale(0.3);
+    z-index: 2;
+}
+.fw6 {
+    top: 50px;
+    right: 50px;
+    transform: translate(50%, -50%) scale(0.3);
+    z-index: 2;
+}
+.tube1 {
+    top: 50px;
+    left: 0px;
+    z-index: 1;
+}
+.tube2 {
+    top: 50px;
+    right: 0px;
+    transform: rotate(60deg);
+    z-index: 1;
 }
 
 table.info th {
