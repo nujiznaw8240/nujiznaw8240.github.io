@@ -13,6 +13,22 @@ body {
     -webkit-text-stroke: 1px black;
 }
 
+#sound-button {
+    border: rgb(146, 104, 19), 2px, solid;
+    border-radius: 10%;
+    background-color: rgb(253, 238, 207);
+    box-shadow: 0 2px #999;
+    cursor: pointer;
+}
+#sound-button:hover {
+    background-color: rgb(249, 224, 175);
+}
+#sound-button:active {
+    background-color: rgb(249, 224, 175);
+    box-shadow: 0 1px #666;
+    transform: translateY(1px);
+}
+
 .mygrid {
     display: grid;
     width: 100vw;
@@ -34,14 +50,21 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
+    /* border: 1px, black, solid; */
 }
 .cake {
     position: absolute;
     max-width: 100%;
     max-height: 100%;
     opacity: 1;
-    object-fit: cover; /* Ensures image covers the div */
+    /* object-fit: cover; Ensures image covers the div */
     transition: opacity 1s ease-in-out;
+}
+#bottom-cake {
+    z-index: 1;
+}
+#top-cake {
+    z-index: 2;
 }
 #top-cake:hover {
     animation: fadeInOut 1s infinite;
@@ -92,11 +115,11 @@ body {
     background: var(--firework-tube-url) no-repeat center/contain;
     cursor: pointer;
 }
-.tube1:hover ~ .firework {
+#tube1:hover ~ .firework {
     transform: translate(-50%, -50%) scale(1); 
     opacity: 1; 
 }
-.tube2:hover ~.firework {
+#tube2:hover ~.firework {
     transform: translate(50%, -50%) scale(1); 
     opacity: 1;
 }
@@ -134,12 +157,12 @@ body {
     transform: translate(50%, -50%) scale(0.3);
     z-index: 1;
 }
-.tube1 {
+#tube1 {
     top: 20px;
     left: -25px;
     z-index: 2;
 }
-.tube2 {
+#tube2 {
     top: 20px;
     right: -20px;
     transform: rotate(60deg);
