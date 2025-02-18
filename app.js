@@ -1,11 +1,11 @@
-var buttonEl = document.getElementById("button");
-var userInputEl = document.getElementById("user-input");
-var onButtonClick = function(){
-    console.log("updated! ");
-    var inputText = document.getElementById("food").value;
-    userInputEl.textContent = inputText;
-};
-buttonEl.addEventListener("click", onButtonClick);
+// var buttonEl = document.getElementById("button");
+// var userInputEl = document.getElementById("user-input");
+// var onButtonClick = function(){
+//     console.log("updated! ");
+//     var inputText = document.getElementById("food").value;
+//     userInputEl.textContent = inputText;
+// };
+// buttonEl.addEventListener("click", onButtonClick);
 
 // turn sound on and off
 var soundButtonPressed = 0;
