@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="birthday-invite.css">
+        <link rel="stylesheet" href="style.css">
         <meta charset="utf-8">
         <title>Birthday Invitation</title>
     </head>
@@ -12,19 +12,21 @@
             <h1>Andy's Birthday Party!</h1>
         </div>
 
+        <button id="sound-button" type="button">sound: off</button>
+
         <div class="mygrid">
             <div class="cake-box">
                 <img class="cake" id="bottom-cake" src="birthday-cake.png" alt="birthday-cake">
-                <img class="cake" id="top-cake" src="https://lh5.googleusercontent.com/proxy/emJRgbAaG3LbfFfYPUdSmCjrFxTgwMGoD60cWGZcAu1Pj9kJ5y7EKbKT4LIWGsCN9PBSfuaiacET6i2uyQmQnUW8ii6L06KDuObboTFxvhXlzg" alt="birthday-cake">
+                <img onmouseover="playCakeAudio()" onmouseout="pauseCakeAudio()" class="cake" id="top-cake" src="https://lh5.googleusercontent.com/proxy/emJRgbAaG3LbfFfYPUdSmCjrFxTgwMGoD60cWGZcAu1Pj9kJ5y7EKbKT4LIWGsCN9PBSfuaiacET6i2uyQmQnUW8ii6L06KDuObboTFxvhXlzg" alt="birthday-cake">
             </div>
             <div class="firework-box1">
-                <div class="fw-tube tube1"></div>
+                <div onmouseover="playFireworkAudio()" onmouseout="pauseFireworkAudio()" class="fw-tube" id="tube1"></div>
                 <div class="firework fw1"></div>
                 <div class="firework fw2"></div>
                 <div class="firework fw3"></div>
             </div>
             <div class="firework-box2">
-                <div class="fw-tube tube2"></div>
+                <div onmouseover="playFireworkAudio()" onmouseout="pauseFireworkAudio()" class="fw-tube" id="tube2"></div>
                 <div class="firework fw4"></div>
                 <div class="firework fw5"></div>
                 <div class="firework fw6"></div>
@@ -41,10 +43,23 @@
             </tr>
             <tr>
                 <td>Hotpot gathering</td>
-                <td>Xintian's Küche</td>
+                <td>Xintian's Place</td>
                 <td>19. Feb, after HöMa Klausur</td>
             </tr>
         </table>
+
+        <div>
+            <label>
+                <input id = "food" type = "text">
+            </label>
+            <button id = "button" type = "button">update</button>
+            <br>
+            <div id = "user-input"></div>
+        </div>
         
+        <audio id = "candle-sound" src="candle-buzz.mp3" muted = true></audio>
+        <audio id = "firework-sound" src="firework.mp3" muted = true></audio>
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+        <script src = "app.js"></script>
     </body>
 </html>
